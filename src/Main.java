@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         //Task 1
@@ -24,15 +26,31 @@ public class Main {
         System.out.println("Максимальная сумма трат за неделю составила " + maxSpend + " рублей");
         //Task 3
         System.out.println("Task 3");
+        Scanner consNumberOfWeek = new Scanner(System.in);
+        System.out.print("Сколько недель в этом месяце? ");
+        int numberOfWeek = consNumberOfWeek.nextInt();
+        long sumWeek = 0L;
+        switch (numberOfWeek){
+            case 4: {
+                int[] spendWeek4 = {27661, 17837, 14665, 15328};
+                for (int i : spendWeek4) sumWeek += i;
+                float MidSpendWeek = (float) sumWeek / 4;
+                String textForPrint = String.format("Средняя сумма трат за месяц составила %s рублей",
+                        MidSpendWeek);
+                System.out.println(textForPrint);
+                break;
+            }
+            case 5: {
+                int[] spendWeek5 = {23061, 10837, 14698, 24328, 17792};
+                for (int i : spendWeek5) sumWeek += i;
+                float MidSpendWeek = (float) sumWeek / 5;
+                String textForPrint = String.format("Средняя сумма трат за месяц составила %s рублей",
+                        MidSpendWeek);
+                System.out.println(textForPrint);
+            }
+        }
         //Task 4
         System.out.println("Task 4");
-        int[] spendWeek2 = {23061, 10837, 14698, 24328, 17792};
-        long sumWeek = 0L;
-        for (int i : spendWeek2) sumWeek += i;
-        float MidSpendWeek = (float) sumWeek / 5;
-        System.out.println("Средняя сумма трат за месяц составила " + MidSpendWeek + " рублей");
-        //Task 5
-        System.out.println("Task 5");
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = reverseFullName.length - 1; i >= 0; i--)
             System.out.print(reverseFullName[i]);
