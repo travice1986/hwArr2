@@ -30,11 +30,12 @@ public class Main {
         System.out.print("Сколько недель в этом месяце? ");
         int numberOfWeek = consNumberOfWeek.nextInt();
         long sumWeek = 0L;
+        byte[] week45 = {4, 5};
         switch (numberOfWeek){
             case 4: {
                 int[] spendWeek4 = {27661, 17837, 14665, 15328};
                 for (int i : spendWeek4) sumWeek += i;
-                float MidSpendWeek = (float) sumWeek / 4;
+                float MidSpendWeek = (float) sumWeek / week45[0];
                 String textForPrint = String.format("Средняя сумма трат за месяц составила %s рублей",
                         MidSpendWeek);
                 System.out.println(textForPrint);
@@ -43,7 +44,7 @@ public class Main {
             case 5: {
                 int[] spendWeek5 = {23061, 10837, 14698, 24328, 17792};
                 for (int i : spendWeek5) sumWeek += i;
-                float MidSpendWeek = (float) sumWeek / 5;
+                float MidSpendWeek = (float) sumWeek / week45[1];
                 String textForPrint = String.format("Средняя сумма трат за месяц составила %s рублей",
                         MidSpendWeek);
                 System.out.println(textForPrint);
